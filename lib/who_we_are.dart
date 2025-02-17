@@ -40,13 +40,13 @@ class Team extends StatelessWidget {
                   name: "Jeremy Parker",
                   role:
                       "Jeremy is a seasoned leader and engineer with expertise in process automation, software development, and machine learning. He most recently lead the technical development at ZeroSound Systems, transforming a hardware-enabled software concept into a globally commercialized product.",
-                  image: "assets/john_doe.jpg",
+                  image: "assets/images/jeremy.jpg",
                 ),
                 TeamCard(
                   name: "Jonathan Johnson",
                   role:
                       "JJ is a marketing leader with years of experience in SAAS and fintech startups. He recently grew Durable from 0 to a 15M Series A raise in 15 months, sat on the executive team at Bench Accounting, and has consulted multiple early-stage startups to successful acquisitions and VC raises.",
-                  image: "assets/jane_doe.jpg",
+                  image: "assets/images/jonathan.png",
                 ),
               ],
             ),
@@ -76,14 +76,13 @@ class TeamCard extends StatelessWidget {
             SizedBox(
               height: 24,
             ),
-            // Image.asset(image),
-            Container(
-              decoration: BoxDecoration(
-                color: PinWoutColors.purple,
-                shape: BoxShape.circle,
+            ClipOval(
+              child: Image.asset(
+                image,
+                height: 100,
+                width: 100,
+                fit: BoxFit.cover,
               ),
-              height: 100,
-              width: 100,
             ),
             Text(name,
                 style: TextStyle(

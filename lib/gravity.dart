@@ -17,6 +17,7 @@ class Gravity extends StatelessWidget {
       padding: EdgeInsets.all(16.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
             height: 60,
@@ -25,7 +26,7 @@ class Gravity extends StatelessWidget {
             "Gravity",
             style: TextStyle(
               color: PinWoutColors.softWhite,
-              fontSize: 24,
+              fontSize: 32,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -34,15 +35,15 @@ class Gravity extends StatelessWidget {
             style: TextStyle(
               color: PinWoutColors.softWhite,
               fontSize: 18,
-              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
             ),
           ),
           SizedBox(height: 18),
           RichText(
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.justify,
             text: TextSpan(
               text:
-                  "Gravity is PinWout’s innovative approach to stabilizing energy grids using mountain gravity energy storage. By leveraging the natural force of gravity, this system stores excess renewable energy during peak production and releases it during periods of high demand. \n\nWith an emphasis on efficiency and sustainability, Gravity offers a cost-effective and scalable alternative to traditional energy storage methods such as Pumped Hydro and Chemical Batteries, helping to reduce grid instability while supporting the transition to a cleaner, greener future.",
+                  "Gravity is PinWout’s approach to stabilizing energy grids using mountain gravity energy storage (MGES). By leveraging the natural force of gravity, this system stores excess renewable energy during peak production and releases it during periods of high demand. \n\nWith an emphasis on efficiency and sustainability, Gravity offers a cost-effective, scalable alternative to traditional energy storage methods such as Pumped Hydro and chemical batteries such as the Tesla Megapack.",
               style: TextStyle(
                 color: PinWoutColors.softWhite,
                 fontSize: 16,
