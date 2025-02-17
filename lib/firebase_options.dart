@@ -60,4 +60,5 @@ class DefaultFirebaseOptions {
     authDomain: 'pinwout-bd900.firebaseapp.com',
     storageBucket: 'pinwout-bd900.firebasestorage.app',
   );
+
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:heroicons/heroicons.dart';
 import 'package:pinwout_vc/colors.dart';
 import 'package:pinwout_vc/logo/opper_logo.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Opper extends StatelessWidget {
   const Opper({super.key});
@@ -36,6 +37,33 @@ class Opper extends StatelessWidget {
           ),
           SizedBox(height: 12),
           OpperGrid(),
+          SizedBox(height: 12),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              MouseRegion(
+                cursor: SystemMouseCursors.click,
+                onEnter: (_) {
+                  // Change text color on hover
+                },
+                onExit: (_) {
+                  // Revert text color when not hovering
+                },
+                child: GestureDetector(
+                  onTap: () {
+                    launchUrl(Uri.parse('https://www.opper.dev'));
+                  },
+                  child: Text(
+                    "Learn more at www.opper.dev",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
