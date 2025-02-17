@@ -20,12 +20,15 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(fontFamily: "Comic"),
       darkTheme: ThemeData.dark(),
       home: Scaffold(
-        body: Align(
-          alignment: Alignment.topCenter,
-          child: ConstrainedBox(
-            constraints: BoxConstraints(maxWidth: 800, minHeight: 10),
-            child: SingleChildScrollView(
-              child: WebOrMobile(),
+        body: Container(
+          color: Colors.black,
+          child: Align(
+            alignment: Alignment.topCenter,
+            child: ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: 800, minHeight: 10),
+              child: SingleChildScrollView(
+                child: WebOrMobile(),
+              ),
             ),
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heroicons/heroicons.dart';
 import 'package:pinwout_vc/colors.dart';
 
 class Opper extends StatelessWidget {
@@ -37,6 +38,7 @@ class Opper extends StatelessWidget {
 }
 
 class OpperCard extends StatelessWidget {
+  final Widget leadingIcon;
   final String title;
   final String description;
 
@@ -44,7 +46,10 @@ class OpperCard extends StatelessWidget {
     super.key,
     required this.title,
     required this.description,
+    required this.leadingIcon,
   });
+
+  get seedLight => null;
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +59,21 @@ class OpperCard extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: Column(
           children: [
-            Text(title,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+            Row(
+              children: [
+                leadingIcon,
+                SizedBox(width: 8),
+                Text(title,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Colors.white.withAlpha(220))),
+              ],
+            ),
             SizedBox(height: 8),
-            Expanded(child: Text(description)),
+            Expanded(
+                child: Text(description,
+                    style: TextStyle(color: Colors.white.withAlpha(160)))),
           ],
         ),
       ),
@@ -83,6 +99,13 @@ class OpperGrid extends StatelessWidget {
       ),
       itemCount: 4,
       itemBuilder: (context, index) {
+        List<Widget> icons = [
+          HeroIcon(HeroIcons.sparkles, color: PinWoutColors.lightGreen),
+          HeroIcon(HeroIcons.academicCap, color: PinWoutColors.lightGreen),
+          HeroIcon(HeroIcons.userGroup, color: PinWoutColors.lightGreen),
+          HeroIcon(HeroIcons.adjustmentsHorizontal,
+              color: PinWoutColors.lightGreen),
+        ];
         List<Map<String, String>> cardData = [
           {
             "title": "Invisible intelligence.",
@@ -95,9 +118,9 @@ class OpperGrid extends StatelessWidget {
                 "Zero onboarding. Zero learning curve. Opper is intentionally designed to be mastered by anyone, anywhere in seconds. Because you're sick of overly complex project management and organization platforms. And so are we."
           },
           {
-            "title": "Community-driven roadmap.",
+            "title": "Align your organization.",
             "description":
-                "We don't speculate about what to build — we talk to our users and build accordingly. Everything we create is community and user driven. We depend on a growing community to gain feedback on what to build, what to improve, and what actually matters. Join us."
+                "A company is the most effective when everyone is rowing in the same diretion. Opper measures and quantifies how well aligned your team is, and provides actionable insights to get everyone on the same page."
           },
           {
             "title": "Pared down prioritization.",
@@ -107,6 +130,7 @@ class OpperGrid extends StatelessWidget {
         ];
 
         return OpperCard(
+          leadingIcon: icons[index],
           title: cardData[index]["title"]!,
           description: cardData[index]["description"]!,
         );
