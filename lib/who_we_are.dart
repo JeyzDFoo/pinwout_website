@@ -21,6 +21,7 @@ class Team extends StatelessWidget {
       child: Center(
         child: Column(
           children: <Widget>[
+            Divider(),
             Text(
               "Who We Are",
               style: TextStyle(
@@ -50,6 +51,7 @@ class Team extends StatelessWidget {
                 ),
               ],
             ),
+            Divider(),
           ],
         ),
       ),

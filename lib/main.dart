@@ -27,7 +27,7 @@ class MainApp extends StatelessWidget {
             child: ConstrainedBox(
               constraints: BoxConstraints(maxWidth: 800, minHeight: 10),
               child: SingleChildScrollView(
-                child: WebOrMobile(),
+                child: Web(),
               ),
             ),
           ),
@@ -58,7 +58,9 @@ class Web extends StatelessWidget {
       children: const [
         Header(title: 'PinWout Venture Corp.'),
         SubHeader(),
+        Divider(),
         Opper(),
+        Divider(),
         Gravity(),
         Team(),
         WhatIsPinWout(),
