@@ -24,7 +24,7 @@ class Team extends StatelessWidget {
             Text(
               "Who We Are",
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -37,7 +37,7 @@ class Team extends StatelessWidget {
               ),
               children: <Widget>[
                 TeamCard(
-                  name: "Jeremy Jeys Parker",
+                  name: "Jeremy Parker",
                   role:
                       "Jeremy is a seasoned leader and engineer with expertise in process automation, software development, and machine learning. He most recently lead the technical development at ZeroSound Systems, transforming a hardware-enabled software concept into a globally commercialized product.",
                   image: "assets/john_doe.jpg",
@@ -85,9 +85,15 @@ class TeamCard extends StatelessWidget {
               height: 100,
               width: 100,
             ),
-            Text(name),
+            Text(name,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold)),
             SizedBox(height: 12),
-            Expanded(child: Text(role)),
+            Expanded(
+                child: Text(role,
+                    style: TextStyle(color: Colors.white.withAlpha(200)))),
           ],
         ),
       ),

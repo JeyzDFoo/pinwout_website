@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:heroicons/heroicons.dart';
 import 'package:pinwout_vc/colors.dart';
+import 'package:pinwout_vc/logo/opper_logo.dart';
 
 class Opper extends StatelessWidget {
   const Opper({super.key});
@@ -12,22 +13,26 @@ class Opper extends StatelessWidget {
       color: PinWoutColors.black,
       child: Column(
         children: [
-          Text(
-            "Opper",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(width: 12),
+              OpperLogo(size: 60, includeTagline: false),
+            ],
           ),
           SizedBox(height: 12),
-          Text(
-            "Simplified prioritization. Faster progression.",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+          Row(
+            children: [
+              SizedBox(width: 12),
+              Text(
+                "Simplified prioritization. Faster progression.",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
           SizedBox(height: 12),
           OpperGrid(),
@@ -100,13 +105,18 @@ class OpperGrid extends StatelessWidget {
       itemCount: 4,
       itemBuilder: (context, index) {
         List<Widget> icons = [
+          HeroIcon(HeroIcons.viewfinderCircle, color: PinWoutColors.lightGreen),
           HeroIcon(HeroIcons.sparkles, color: PinWoutColors.lightGreen),
           HeroIcon(HeroIcons.academicCap, color: PinWoutColors.lightGreen),
-          HeroIcon(HeroIcons.userGroup, color: PinWoutColors.lightGreen),
           HeroIcon(HeroIcons.adjustmentsHorizontal,
               color: PinWoutColors.lightGreen),
         ];
         List<Map<String, String>> cardData = [
+          {
+            "title": "Align your organization.",
+            "description":
+                "Your company is the most effective when everyone is rowing in the same diretion. Opper measures and quantifies how well aligned your team is, and provides actionable insights to get everyone on the same page."
+          },
           {
             "title": "Invisible intelligence.",
             "description":
@@ -116,11 +126,6 @@ class OpperGrid extends StatelessWidget {
             "title": "Mastered in seconds.",
             "description":
                 "Zero onboarding. Zero learning curve. Opper is intentionally designed to be mastered by anyone, anywhere in seconds. Because you're sick of overly complex project management and organization platforms. And so are we."
-          },
-          {
-            "title": "Align your organization.",
-            "description":
-                "A company is the most effective when everyone is rowing in the same diretion. Opper measures and quantifies how well aligned your team is, and provides actionable insights to get everyone on the same page."
           },
           {
             "title": "Pared down prioritization.",
