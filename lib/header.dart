@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pinwout_vc/colors.dart';
+import 'package:pinwout_vc/logo/pinwout_logo.dart';
 
 class Header extends StatelessWidget {
   final String title;
@@ -14,24 +15,23 @@ class Header extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          PinwoutLogo(size: 48),
+          // Text(
+          //   title,
+          //   style: TextStyle(
+          //     color: PinWoutColors.beige,
+          //     fontSize: 18,
+          //     fontWeight: FontWeight.bold,
+          //   ),
+          //   overflow: TextOverflow.ellipsis,
+          //   maxLines: 1,
+          // ),
           Text(
-            title,
-            style: TextStyle(
-              color: PinWoutColors.beige,
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
-            overflow: TextOverflow.ellipsis,
-            maxLines: 1,
-          ),
-          Text(
-            "Calgary, AB",
+            "Calgary, AB, CANADA",
             style: TextStyle(
               color: PinWoutColors.beige,
               fontSize: 14,
             ),
-            overflow: TextOverflow.ellipsis,
-            maxLines: 1,
           ),
         ],
       ),

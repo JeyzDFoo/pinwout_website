@@ -42,10 +42,7 @@ class WebOrMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isMobile = kIsWeb &&
-        (defaultTargetPlatform == TargetPlatform.iOS ||
-            defaultTargetPlatform == TargetPlatform.android);
-    return isMobile ? const Mobile() : const Web();
+    return const Web();
   }
 }
 
@@ -66,14 +63,5 @@ class Web extends StatelessWidget {
         WhatIsPinWout(),
       ],
     );
-  }
-}
-
-class Mobile extends StatelessWidget {
-  const Mobile({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }

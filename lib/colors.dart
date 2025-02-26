@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 class PinWoutColors {
   static const Color seedLight = Color.fromARGB(255, 255, 255, 255); // White
+  static const Color primaryCyan = Color.fromARGB(255, 0, 255, 255); // Cyan
+  static const Color primaryMagenta =
+      Color.fromARGB(255, 255, 0, 255); // Magenta
+  static const Color primaryYellow = Color.fromARGB(255, 255, 255, 0); // Yellow
 
   // Primary Colors
   static const Color blue = Color.fromARGB(255, 0, 80, 158); // Deep Blue
