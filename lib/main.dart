@@ -8,7 +8,7 @@ import 'package:pinwout_vc/what_is_pinwout.dart';
 import 'package:pinwout_vc/who_we_are.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const LogoApp());
 }
 
 class LogoApp extends StatelessWidget {
