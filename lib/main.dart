@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pinwout_vc/gravity.dart';
 import 'package:pinwout_vc/header.dart';
+import 'package:pinwout_vc/logo/pinwout_logo.dart';
 import 'package:pinwout_vc/opper.dart';
 import 'package:pinwout_vc/subheader.dart';
 import 'package:pinwout_vc/what_is_pinwout.dart';
@@ -8,6 +9,19 @@ import 'package:pinwout_vc/who_we_are.dart';
 
 void main() {
   runApp(const MainApp());
+}
+
+class LogoApp extends StatelessWidget {
+  const LogoApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'PinWout Venture Corp.',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: Center(child: PinWoutIcon(size: 800)),
+    );
+  }
 }
 
 class MainApp extends StatelessWidget {

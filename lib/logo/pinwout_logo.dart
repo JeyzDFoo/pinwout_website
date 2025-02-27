@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pinwout_vc/colors.dart';
 import 'pinwout_logo_painter.dart';
 
 class PinWoutIcon extends StatefulWidget {
@@ -22,7 +21,7 @@ class _PinWoutIconState extends State<PinWoutIcon> {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: CustomPaint(
-          painter: PinWoutLogoPainter(),
+          painter: PinWoutLogoPainter(widget.size),
         ),
       ),
     );
@@ -57,7 +56,7 @@ class _PinwoutLogoState extends State<PinwoutLogo> {
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: CustomPaint(
-                painter: PinWoutLogoPainter(),
+                painter: PinWoutLogoPainter(widget.size),
               ),
             ),
           ),
