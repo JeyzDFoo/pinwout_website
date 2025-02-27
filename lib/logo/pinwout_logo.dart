@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pinwout_vc/colors.dart';
 import 'pinwout_logo_painter.dart';
 
 class PinWoutIcon extends StatefulWidget {
@@ -40,10 +41,11 @@ class _PinwoutLogoState extends State<PinwoutLogo> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: widget.size * 4,
+      width: widget.size * 3.2,
       height: widget.size,
       decoration: BoxDecoration(
-          color: Colors.black, borderRadius: BorderRadius.circular(10)),
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(widget.size)),
       child: Row(
         children: [
           Container(
@@ -59,12 +61,29 @@ class _PinwoutLogoState extends State<PinwoutLogo> {
               ),
             ),
           ),
-          Text("PinWout",
+          RichText(
+            text: TextSpan(
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 32,
-                  fontFeatures: [FontFeature.randomize()],
-                  fontStyle: FontStyle.italic)),
+                  fontSize: 26,
+                  fontStyle: FontStyle.italic),
+              children: [
+                TextSpan(text: 'P'),
+                TextSpan(
+                  text: 'in',
+                  style: TextStyle(fontSize: 20),
+                ),
+                TextSpan(text: 'W'),
+                TextSpan(
+                  text: 'out',
+                  style: TextStyle(fontSize: 20),
+                ),
+                TextSpan(
+                    text: '.',
+                    style: TextStyle(color: PinWoutColors.primaryYellow)),
+              ],
+            ),
+          ),
         ],
       ),
     );

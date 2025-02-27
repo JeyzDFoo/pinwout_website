@@ -19,18 +19,51 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: "Comic"),
       darkTheme: ThemeData.dark(),
-      home: Scaffold(
-        body: Container(
-          color: Colors.black,
-          child: Align(
-            alignment: Alignment.topCenter,
-            child: ConstrainedBox(
-              constraints: BoxConstraints(maxWidth: 800, minHeight: 10),
-              child: SingleChildScrollView(
-                child: Web(),
-              ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/about': (context) => const AboutScreen(),
+        // Add more routes here
+      },
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        color: Colors.black,
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: 800, minHeight: 10),
+            child: SingleChildScrollView(
+              child: Web(),
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class AboutScreen extends StatelessWidget {
+  const AboutScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('About Us'),
+      ),
+      body: Center(
+        child: Text(
+          'This is the About Us page',
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );

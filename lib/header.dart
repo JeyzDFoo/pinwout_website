@@ -27,7 +27,7 @@ class Header extends StatelessWidget {
           //   maxLines: 1,
           // ),
           Text(
-            "Calgary, AB, CANADA",
+            "Calgary\nCanada",
             style: TextStyle(
               color: PinWoutColors.beige,
               fontSize: 14,
