@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
 import 'package:pinwout_vc/gravity.dart';
 import 'package:pinwout_vc/header.dart';
 import 'package:pinwout_vc/opper.dart';

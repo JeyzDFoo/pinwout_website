@@ -14,25 +14,10 @@ class Header extends StatelessWidget {
       color: PinWoutColors.blue,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           PinwoutLogo(size: 48),
-          // Text(
-          //   title,
-          //   style: TextStyle(
-          //     color: PinWoutColors.beige,
-          //     fontSize: 18,
-          //     fontWeight: FontWeight.bold,
-          //   ),
-          //   overflow: TextOverflow.ellipsis,
-          //   maxLines: 1,
-          // ),
-          Text(
-            "Calgary\nCanada",
-            style: TextStyle(
-              color: PinWoutColors.beige,
-              fontSize: 14,
-            ),
-          ),
+          Image.asset("assets/images/canadaflag.png", height: 28),
         ],
       ),
     );

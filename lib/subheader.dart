@@ -16,7 +16,8 @@ class SubHeader extends StatelessWidget {
       ),
       padding: EdgeInsets.all(16.0),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
             height: 30,
@@ -31,10 +32,10 @@ class SubHeader extends StatelessWidget {
           ),
           SizedBox(height: 12),
           RichText(
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.left,
             text: TextSpan(
               text:
-                  "We transform small inputs into powerful results, focusing on efficiency and impact. With our flagship app, Opper, we help businesses turn everyday efforts into meaningful outcomes, reflecting our belief that with the right approach, any input—whether energy or investment—can create greater value.",
+                  "We transform small inputs into powerful results, focusing on efficiency and impact. With our flagship app, Opper, we are redefining how business operate. As one of Alberta's fastest growing tech companies, we are strategically positioning ourselves to be a diversified tech giant.",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
@@ -42,7 +43,7 @@ class SubHeader extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 50,
+            height: 80,
           ),
         ],
       ),

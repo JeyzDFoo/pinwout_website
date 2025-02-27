@@ -78,9 +78,9 @@ class _PinwoutLogoState extends State<PinwoutLogo> {
                   text: 'out',
                   style: TextStyle(fontSize: 20),
                 ),
-                TextSpan(
-                    text: '.',
-                    style: TextStyle(color: PinWoutColors.primaryYellow)),
+                // TextSpan(
+                //     text: '.',
+                //     style: TextStyle(color: PinWoutColors.primaryYellow)),
               ],
             ),
           ),
