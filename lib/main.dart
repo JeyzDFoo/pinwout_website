@@ -14,7 +14,7 @@ import 'package:pinwout_vc/who_we_are.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //await Firebase.initializeApp();
-  runApp(MainApp());
+  runApp(LogoApp());
 }
 
 class LogoApp extends StatelessWidget {

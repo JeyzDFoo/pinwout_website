@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'dart:math';
-
+import 'package:flutter/rendering.dart';
 import 'package:pinwout_vc/colors.dart';
 
 class PinWoutLogoPainter extends CustomPainter {
@@ -12,9 +11,10 @@ class PinWoutLogoPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // Draw red sine wave (half cycle stretched to take up the whole space, flipped about the x-axis)
     final redPaint = Paint()
-      ..color = PinWoutColors.golden.withAlpha(120)
+      ..color = PinWoutColors.primaryYellow.withAlpha(150)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = (iconSize / 50).clamp(2, 10);
+      ..strokeCap = StrokeCap.round
+      ..strokeWidth = (iconSize / 10).clamp(2, 100);
     final sineStart = 0.0;
     final sineEnd = pi;
 
@@ -33,9 +33,10 @@ class PinWoutLogoPainter extends CustomPainter {
 
     // Draw blue sine wave (half cycle stretched)
     final bluePaint = Paint()
-      ..color = PinWoutColors.green.withAlpha(200)
+      ..color = PinWoutColors.primaryCyan.withAlpha(180)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = (iconSize / 50).clamp(2, 10);
+      ..strokeCap = StrokeCap.round
+      ..strokeWidth = (iconSize / 10).clamp(2, 100);
 
     final blueSinePath = Path();
     blueSinePath.moveTo(0, size.height / 2 + amplitude * sin(3 * pi / 2));
@@ -49,9 +50,10 @@ class PinWoutLogoPainter extends CustomPainter {
 
     // Draw green horizontal sine wave starting at the origin
     final greenPaint = Paint()
-      ..color = PinWoutColors.blue.withAlpha(200)
+      ..color = PinWoutColors.primaryMagenta.withAlpha(150)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = (iconSize / 50).clamp(2, 10);
+      ..strokeCap = StrokeCap.round
+      ..strokeWidth = (iconSize / 10).clamp(2, 100);
 
     final greenSinePath = Path();
     greenSinePath.moveTo(0, size.height / 2 - amplitude * sin(3 * pi / 2));
