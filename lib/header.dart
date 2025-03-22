@@ -14,10 +14,14 @@ class Header extends StatelessWidget {
       color: PinWoutColors.blue,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           PinwoutLogo(size: 48),
-          Image.asset("assets/images/canadaflag.png", height: 28),
+          Image.asset(
+            "assets/images/leaf_badge.png",
+            scale: 5,
+            fit: BoxFit.contain, // Added BoxFit property
+          ),
         ],
       ),
     );
