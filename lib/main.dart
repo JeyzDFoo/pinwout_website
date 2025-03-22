@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:confetti/confetti.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -15,7 +13,7 @@ import 'package:pinwout_vc/who_we_are.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  //await Firebase.initializeApp();
   runApp(MainApp());
 }
 
@@ -58,7 +56,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final FirebaseAnalytics _analytics = FirebaseAnalytics.instance;
+  //final FirebaseAnalytics _analytics = FirebaseAnalytics.instance;
 
   final ConfettiController _controllerTopCenter =
       ConfettiController(duration: const Duration(seconds: 1));
@@ -66,14 +64,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     _controllerTopCenter.play();
-    _analytics.logAppOpen();
+    //_analytics.logAppOpen();
     super.initState();
   }
 
   @override
   void dispose() {
     _controllerTopCenter.dispose();
-    _analytics.resetAnalyticsData();
+    //_analytics.resetAnalyticsData();
     super.dispose();
   }
 
