@@ -1,5 +1,5 @@
 name: pinwout_vc
-description: "A new Flutter project."
+description: "Power In, Work Out."
 publish_to: 'none'
 version: 0.1.0
 
@@ -14,6 +14,7 @@ dependencies:
   url_launcher: ^6.3.1
   flutter_launcher_icons: ^0.14.3
   confetti: ^0.8.0
+  firebase_analytics: ^11.4.4
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:confetti/confetti.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pinwout_vc/colors.dart';
 import 'package:pinwout_vc/gravity.dart';
@@ -29,7 +31,7 @@ class LogoApp extends StatelessWidget {
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,18 +56,22 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final FirebaseAnalytics _analytics = FirebaseAnalytics.instance;
+
   final ConfettiController _controllerTopCenter =
       ConfettiController(duration: const Duration(seconds: 1));
 
   @override
   void initState() {
     _controllerTopCenter.play();
+    _analytics.logAppOpen();
     super.initState();
   }
 
   @override
   void dispose() {
     _controllerTopCenter.dispose();
+    _analytics.resetAnalyticsData();
     super.dispose();
   }
 
