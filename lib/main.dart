@@ -1,4 +1,8 @@
+import 'dart:math';
+
+import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
+import 'package:pinwout_vc/colors.dart';
 import 'package:pinwout_vc/gravity.dart';
 import 'package:pinwout_vc/header.dart';
 import 'package:pinwout_vc/logo/pinwout_logo.dart';
@@ -8,7 +12,7 @@ import 'package:pinwout_vc/what_is_pinwout.dart';
 import 'package:pinwout_vc/who_we_are.dart';
 
 void main() {
-  runApp(const LogoApp());
+  runApp(const MainApp());
 }
 
 class LogoApp extends StatelessWidget {
@@ -34,7 +38,7 @@ class MainApp extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomeScreen(),
+        '/': (context) => HomeScreen(),
         '/about': (context) => const AboutScreen(),
         // Add more routes here
       },
@@ -42,23 +46,72 @@ class MainApp extends StatelessWidget {
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final ConfettiController _controllerTopCenter =
+      ConfettiController(duration: const Duration(seconds: 1));
+
+  @override
+  void initState() {
+    _controllerTopCenter.play();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controllerTopCenter.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.black,
-        child: Align(
-          alignment: Alignment.topCenter,
-          child: ConstrainedBox(
-            constraints: BoxConstraints(maxWidth: 800, minHeight: 10),
-            child: SingleChildScrollView(
-              child: Web(),
+      body: Stack(
+        children: [
+          Container(
+            color: Colors.black,
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: ConstrainedBox(
+                constraints: BoxConstraints(maxWidth: 800, minHeight: 10),
+                child: SingleChildScrollView(
+                  child: Web(),
+                ),
+              ),
             ),
           ),
-        ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              for (var i = 0; i < 10; i++)
+                ConfettiWidget(
+                  confettiController: _controllerTopCenter,
+                  //blastDirection: -pi / 2,
+                  blastDirectionality: BlastDirectionality.explosive,
+                  emissionFrequency: 0.05,
+                  numberOfParticles: 5,
+                  maxBlastForce: 20,
+                  minBlastForce: 2,
+                  gravity: 0.2,
+                  colors: [
+                    PinWoutColors.blue,
+                    PinWoutColors.green,
+                    PinWoutColors.purple,
+                    PinWoutColors.black,
+                    PinWoutColors.primaryCyan,
+                    PinWoutColors.primaryMagenta,
+                    PinWoutColors.primaryYellow,
+                  ],
+                ),
+            ],
+          ),
+        ],
       ),
     );
   }
