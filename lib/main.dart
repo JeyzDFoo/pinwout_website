@@ -13,8 +13,10 @@ import 'package:pinwout_vc/subheader.dart';
 import 'package:pinwout_vc/what_is_pinwout.dart';
 import 'package:pinwout_vc/who_we_are.dart';
 
-void main() {
-  runApp(const MainApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MainApp());
 }
 
 class LogoApp extends StatelessWidget {
