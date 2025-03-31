@@ -15,14 +15,24 @@ class Opper extends StatelessWidget {
       color: PinWoutColors.black,
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+          Stack(
             children: [
-              SizedBox(width: 12),
-              OpperLogo(size: 60, includeTagline: false),
-              Image.asset(
-                "assets/images/app_stores.png",
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(width: 12),
+                  OpperLogo(size: 60, includeTagline: false),
+                ],
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Image.asset(
+                    "assets/images/app_stores.png",
+                    scale: 2.5,
+                  ),
+                ],
+              )
             ],
           ),
           SizedBox(height: 12),
