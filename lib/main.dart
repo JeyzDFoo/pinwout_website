@@ -1,9 +1,9 @@
 import 'package:confetti/confetti.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pinwout_vc/colors.dart';
 import 'package:pinwout_vc/gravity.dart';
-import 'package:pinwout_vc/gravity_download.dart';
 import 'package:pinwout_vc/header.dart';
 import 'package:pinwout_vc/logo/pinwout_logo.dart';
 import 'package:pinwout_vc/opper.dart';
@@ -18,6 +18,7 @@ void main() async {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
+    FirebaseAnalytics.instance;
   } catch (e) {
     debugPrint('Failed to initialize Firebase: $e');
   }
@@ -48,7 +49,6 @@ class MainApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomeScreen(),
-        '/gravity': (context) => const GravityDownload(),
         // Add more routes here
       },
     );
@@ -63,7 +63,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  //final FirebaseAnalytics _analytics = FirebaseAnalytics.instance;
+  final FirebaseAnalytics _analytics = FirebaseAnalytics.instance;
 
   final ConfettiController _controllerTopCenter =
       ConfettiController(duration: const Duration(seconds: 1));
@@ -71,14 +71,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     _controllerTopCenter.play();
-    //_analytics.logAppOpen();
+    _analytics.logAppOpen();
     super.initState();
   }
 
   @override
   void dispose() {
     _controllerTopCenter.dispose();
-    //_analytics.resetAnalyticsData();
+    _analytics.resetAnalyticsData();
     super.dispose();
   }
 

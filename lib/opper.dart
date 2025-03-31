@@ -1,3 +1,5 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:heroicons/heroicons.dart';
 import 'package:pinwout_vc/colors.dart';
@@ -51,6 +53,12 @@ class Opper extends StatelessWidget {
                 },
                 child: GestureDetector(
                   onTap: () {
+                    FirebaseAnalytics.instance.logEvent(
+                      name: 'opper_website_clicked',
+                      parameters: {
+                        'source': 'opper_widget',
+                      },
+                    );
                     launchUrl(Uri.parse('https://www.opper.dev'));
                   },
                   child: Text(

@@ -1,11 +1,20 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:pinwout_vc/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class WhatIsPinWout extends StatelessWidget {
+class WhatIsPinWout extends StatefulWidget {
   const WhatIsPinWout({
     super.key,
   });
+
+  @override
+  State<WhatIsPinWout> createState() => _WhatIsPinWoutState();
+}
+
+class _WhatIsPinWoutState extends State<WhatIsPinWout> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _messageController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -68,31 +77,73 @@ class WhatIsPinWout extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                MouseRegion(
-                  cursor: SystemMouseCursors.click,
-                  onEnter: (_) {
-                    // Change text color on hover
-                  },
-                  onExit: (_) {
-                    // Revert text color when not hovering
-                  },
-                  child: GestureDetector(
-                    onTap: () {
-                      launchUrl(Uri.parse('mailto:cofounders@pinwout.com'));
-                    },
-                    child: Text(
-                      "Contact Us",
-                      style: TextStyle(
-                          color: PinWoutColors.beige,
-                          decoration: TextDecoration.underline,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
+                Text(
+                  "Contact Us",
+                  style: TextStyle(
+                      color: PinWoutColors.beige,
+                      decoration: TextDecoration.underline,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold),
                 ),
               ],
             ),
             SizedBox(height: 12),
+            TextField(
+              controller: _emailController,
+              decoration: InputDecoration(
+                labelText: 'Email',
+                labelStyle: TextStyle(color: PinWoutColors.beige),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: PinWoutColors.beige),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: PinWoutColors.beige),
+                ),
+              ),
+              style: TextStyle(color: PinWoutColors.beige),
+            ),
+            SizedBox(height: 12),
+            TextField(
+              controller: _messageController,
+              maxLines: 3,
+              decoration: InputDecoration(
+                labelText: 'How can we help you?',
+                labelStyle: TextStyle(color: PinWoutColors.beige),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: PinWoutColors.beige),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: PinWoutColors.beige),
+                ),
+              ),
+              style: TextStyle(color: PinWoutColors.beige),
+            ),
+            SizedBox(height: 12),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    onPressed: () async {
+                      await FirebaseAnalytics.instance.logEvent(
+                        name: 'submit_contact_form',
+                        parameters: {
+                          'email': _emailController.text,
+                          'message': _messageController.text,
+                          'timestamp': DateTime.now().toIso8601String(),
+                        },
+                      );
+                      _emailController.clear();
+                      _messageController.clear();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text("Thank you, we will be in touch!"),
+                          duration: Duration(seconds: 2),
+                        ),
+                      );
+                    },
+                    child: Text("Submit")),
+              ],
+            ),
           ],
         ),
       ),

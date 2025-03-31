@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:pinwout_vc/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -68,6 +69,13 @@ class Gravity extends StatelessWidget {
                 },
                 child: GestureDetector(
                   onTap: () async {
+                    FirebaseAnalytics.instance.logEvent(
+                      name: 'gravity_whitepaper_clicked',
+                      parameters: {
+                        'source': 'gravity_widget',
+                      },
+                    );
+
                     try {
                       final ref = FirebaseStorage.instance.ref(
                           'gs://pinwout-bd900.firebasestorage.app/gravity_whitepaper_30-mar-2025.pdf');
