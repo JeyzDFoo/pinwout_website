@@ -1,20 +1,27 @@
 import 'package:confetti/confetti.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pinwout_vc/colors.dart';
 import 'package:pinwout_vc/gravity.dart';
+import 'package:pinwout_vc/gravity_download.dart';
 import 'package:pinwout_vc/header.dart';
 import 'package:pinwout_vc/logo/pinwout_logo.dart';
 import 'package:pinwout_vc/opper.dart';
 import 'package:pinwout_vc/subheader.dart';
 import 'package:pinwout_vc/what_is_pinwout.dart';
 import 'package:pinwout_vc/who_we_are.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
-  runApp(LogoApp());
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } catch (e) {
+    debugPrint('Failed to initialize Firebase: $e');
+  }
+  runApp(MainApp());
 }
 
 class LogoApp extends StatelessWidget {
@@ -31,7 +38,7 @@ class LogoApp extends StatelessWidget {
 }
 
 class MainApp extends StatelessWidget {
-  MainApp({super.key});
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +48,7 @@ class MainApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomeScreen(),
-        '/about': (context) => const AboutScreen(),
+        '/gravity': (context) => const GravityDownload(),
         // Add more routes here
       },
     );

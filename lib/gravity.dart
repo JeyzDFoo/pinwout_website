@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pinwout_vc/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 class Gravity extends StatelessWidget {
   const Gravity({super.key});
@@ -51,7 +53,46 @@ class Gravity extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 50,
+            height: 25,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              MouseRegion(
+                cursor: SystemMouseCursors.click,
+                onEnter: (_) {
+                  // Change text color on hover
+                },
+                onExit: (_) {
+                  // Revert text color when not hovering
+                },
+                child: GestureDetector(
+                  onTap: () async {
+                    try {
+                      final ref = FirebaseStorage.instance.ref(
+                          'gs://pinwout-bd900.firebasestorage.app/gravity_whitepaper_30-mar-2025.pdf');
+                      final url = await ref.getDownloadURL();
+                      // Logic to download the file using the URL
+                      // For example, you can use the `url_launcher` package to open the URL in a browser
+                      await launchUrl(Uri.parse(url));
+                    } catch (e) {
+                      // Handle errors, e.g., file not found or network issues
+                      print('Error downloading file: $e');
+                    }
+                  },
+                  child: Text(
+                    "Download the Gravity Whitepaper",
+                    style: TextStyle(
+                      color: PinWoutColors.golden,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 25,
           ),
         ],
       ),

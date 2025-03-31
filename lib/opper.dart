@@ -56,8 +56,8 @@ class Opper extends StatelessWidget {
                   child: Text(
                     "Learn more at www.opper.dev",
                     style: TextStyle(
-                      color: Colors.blue,
-                      decoration: TextDecoration.underline,
+                      color: PinWoutColors.golden,
+                      decoration: TextDecoration.none,
                     ),
                   ),
                 ),
