@@ -131,6 +131,7 @@ class OpperGrid extends StatelessWidget {
     int crossAxisCount = screenWidth < 600 ? 1 : 2;
 
     return GridView.builder(
+      physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount,

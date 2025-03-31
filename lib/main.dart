@@ -47,6 +47,9 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(fontFamily: "Comic"),
       darkTheme: ThemeData.dark(),
       initialRoute: '/',
+      navigatorObservers: [
+        FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
+      ],
       routes: {
         '/': (context) => HomeScreen(),
         // Add more routes here

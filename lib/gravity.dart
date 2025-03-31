@@ -77,9 +77,9 @@ class Gravity extends StatelessWidget {
                     );
 
                     try {
-                      final ref = FirebaseStorage.instance
-                          .ref('gravity_whitepaper_30-mar-2025.pdf');
-                      final url = await ref.getDownloadURL();
+                      final url =
+                          "https://firebasestorage.googleapis.com/v0/b/pinwout-bd900.firebasestorage.app/o/gravity_whitepaper_30-mar-2025.pdf?alt=media&token=14f6ba40-f986-4446-8f61-90453f37238b";
+                      //print("download url: $url");
                       // Logic to download the file using the URL
                       // For example, you can use the `url_launcher` package to open the URL in a browser
                       await launchUrl(Uri.parse(url));
@@ -89,7 +89,7 @@ class Gravity extends StatelessWidget {
                     }
                   },
                   child: Text(
-                    "Download the Gravity Whitepaper",
+                    "Download Gravity Whitepaper",
                     style: TextStyle(
                       color: PinWoutColors.golden,
                       decoration: TextDecoration.none,

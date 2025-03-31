@@ -31,6 +31,7 @@ class Team extends StatelessWidget {
               ),
             ),
             GridView(
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                 maxCrossAxisExtent: 600, // Adjust this value as needed
