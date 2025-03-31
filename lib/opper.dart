@@ -1,5 +1,4 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:heroicons/heroicons.dart';
 import 'package:pinwout_vc/colors.dart';
@@ -21,6 +20,9 @@ class Opper extends StatelessWidget {
             children: [
               SizedBox(width: 12),
               OpperLogo(size: 60, includeTagline: false),
+              Image.asset(
+                "assets/images/app_stores.png",
+              ),
             ],
           ),
           SizedBox(height: 12),
