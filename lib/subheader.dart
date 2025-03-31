@@ -35,7 +35,7 @@ class SubHeader extends StatelessWidget {
             textAlign: TextAlign.left,
             text: TextSpan(
               text:
-                  "We transform small inputs into powerful results, focusing on efficiency and impact. With our flagship app, Opper, we are redefining how business operate. As one of Alberta's fastest growing tech companies, we are strategically positioning ourselves to be a diversified tech giant.",
+                  "We transform small inputs into powerful results, focusing on efficiency and impact. With our flagship app, Opper, we are redefining how business operate. As one of Alberta's fastest growing tech companies, we are strategically positioning ourselves to be a sustainable, decentralized, and diversified technology company.",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,

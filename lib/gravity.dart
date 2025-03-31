@@ -77,8 +77,8 @@ class Gravity extends StatelessWidget {
                     );
 
                     try {
-                      final ref = FirebaseStorage.instance.ref(
-                          'gs://pinwout-bd900.firebasestorage.app/gravity_whitepaper_30-mar-2025.pdf');
+                      final ref = FirebaseStorage.instance
+                          .ref('gravity_whitepaper_30-mar-2025.pdf');
                       final url = await ref.getDownloadURL();
                       // Logic to download the file using the URL
                       // For example, you can use the `url_launcher` package to open the URL in a browser
