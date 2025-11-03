@@ -61,7 +61,7 @@ const TeamSection: React.FC = () => {
 
         <motion.div
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          className="team-grid"
         >
           {team.map((member, index) => (
             <motion.div key={index} variants={itemVariants}>

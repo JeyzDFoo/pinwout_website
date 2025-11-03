@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/Button';
 import { FeatureCard } from '@/components/ui/Card';
 import { Target, Sparkles, GraduationCap, Settings, ExternalLink, Download } from 'lucide-react';
 
-const ProductsSection: React.FC = () => {
+const PortfolioSection: React.FC = () => {
   const opperFeatures = [
     {
       icon: <Target size={24} />,
@@ -67,11 +67,11 @@ const ProductsSection: React.FC = () => {
               </p>
               <div className="flex flex-col space-y-4">
                 <Button 
-                  variant="secondary"
+                  variant="cta"
                   className="group w-fit"
-                  onClick={() => window.open('https://www.opper.dev', '_blank')}
+                  onClick={() => window.location.href = '/opper'}
                 >
-                  Visit opper.dev
+                  Join Opper Beta
                   <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
@@ -88,7 +88,7 @@ const ProductsSection: React.FC = () => {
 
           <motion.div 
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            className="portfolio-grid"
           >
             {opperFeatures.map((feature, index) => (
               <motion.div key={index} variants={itemVariants}>
@@ -148,4 +148,4 @@ const ProductsSection: React.FC = () => {
   );
 };
 
-export { ProductsSection };
+export { PortfolioSection };

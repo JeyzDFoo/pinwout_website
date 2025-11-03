@@ -5,17 +5,16 @@ import { Container } from '@/components/ui/Container';
 
 const Footer: React.FC = () => {
   const quickLinks = [
-    { name: 'Opper', href: '/opper' },
-    { name: 'Gravity', href: '/gravity' },
-    { name: 'Unpanic', href: '#products' },
+    { name: 'Portfolio', href: '/#portfolio' },
     { name: 'Team', href: '/team' },
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
 
   const products = [
-    { name: 'Opper App', href: 'https://www.opper.dev' },
+    { name: 'Opper Beta', href: '/opper' },
     { name: 'Gravity Whitepaper', href: '/gravity#whitepaper' },
-    { name: 'Unpanic', href: '#products' },
+    { name: 'Unpanic', href: '/#portfolio' },
   ];
 
   return (
@@ -58,9 +57,9 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Projects */}
+            {/* Portfolio */}
             <div>
-              <h4 className="font-semibold text-white mb-4">Projects</h4>
+              <h4 className="font-semibold text-white mb-4">Portfolio</h4>
               <ul className="space-y-2">
                 {products.map((product) => (
                   <li key={product.name}>

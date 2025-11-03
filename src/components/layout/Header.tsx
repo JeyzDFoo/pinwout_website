@@ -12,8 +12,8 @@ const Header: React.FC = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Opper', href: '/opper' },
-    { name: 'Gravity', href: '/gravity' },
+    { name: 'Portfolio', href: '/#portfolio' },
+    { name: 'Opper Beta', href: '/opper' },
     { name: 'Team', href: '/team' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
@@ -43,13 +43,14 @@ const Header: React.FC = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex">
-            <Button 
-              variant="cta" 
-              size="sm"
-              onClick={() => window.open('https://www.opper.dev', '_blank')}
-            >
-              Get Started
-            </Button>
+            <Link href="/opper">
+              <Button 
+                variant="cta" 
+                size="sm"
+              >
+                Contact Sales
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -81,17 +82,15 @@ const Header: React.FC = () => {
                 </Link>
               ))}
               <div className="pt-4">
-                <Button 
-                  variant="cta" 
-                  size="sm" 
-                  className="w-full"
-                  onClick={() => {
-                    window.open('https://www.opper.dev', '_blank');
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  Get Started
-                </Button>
+                <Link href="/opper" onClick={() => setIsMenuOpen(false)}>
+                  <Button 
+                    variant="cta" 
+                    size="sm" 
+                    className="w-full"
+                  >
+                    Contact Sales
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>

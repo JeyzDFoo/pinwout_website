@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
+import { OpperWaitlistForm } from '@/components/forms/OpperWaitlistForm';
 import { ArrowRight, Play } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -44,20 +45,14 @@ const Hero: React.FC = () => {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <Button 
-              variant="cta" 
-              size="lg"
-              className="group"
-              onClick={() => window.open('https://www.opper.dev', '_blank')}
-            >
-              Try Opper Now
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <div className="max-w-md w-full">
+              <OpperWaitlistForm />
+            </div>
             
             <Button 
               variant="secondary" 

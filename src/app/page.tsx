@@ -26,112 +26,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="products" className="section section-products">
+      {/* Portfolio Section */}
+      <section id="portfolio" className="section section-products">
         <div className="container">
           <div className={`animate-fade-in-up animate-delay-200 ${isVisible ? '' : 'opacity-0'}`}>
-            <h2 className="text-h2 mb-6" style={{ textAlign: 'center' }}>Our Projects</h2>
+            <h2 className="text-h2 mb-6" style={{ textAlign: 'center' }}>Our Portfolio</h2>
             
-            {/* Opper Product */}
-            <div className="product-section mb-6">
-              <h3 className="text-h2 text-accent mb-3">Opper</h3>
-              <p className="text-subtitle mb-3">
-                Simplified prioritization. Faster progression.
-              </p>
-              <p className="text-body mb-6" style={{ opacity: 0.8, fontStyle: 'italic' }}>
-                Opper beta round is currently closed. Sign up for the waitlist to get the latest news and early access.
-              </p>
-              
-              <div className="grid grid-cols-auto mb-6">
-                <div className="feature-card">
-                  <div className="feature-icon">
-                    <Users size={32} />
-                  </div>
-                  <h4 className="text-h3 mb-2">Align your organization.</h4>
-                  <p className="text-body">
-                    Your company is the most effective when everyone is rowing in the same direction. Opper measures and quantifies how well aligned your team is, and provides actionable insights to get everyone on the same page.
-                  </p>
-                </div>
-                <div className="feature-card">
-                  <div className="feature-icon">
-                    <Brain size={32} />
-                  </div>
-                  <h4 className="text-h3 mb-2">Invisible intelligence.</h4>
-                  <p className="text-body">
-                    Opper uses proven decision making frameworks and prioritization methods to bring data to your intuition and decision making. But you'd never know it. Opper's intelligence is designed to stay out of your way.
-                  </p>
-                </div>
-                <div className="feature-card">
-                  <div className="feature-icon">
-                    <Zap size={32} />
-                  </div>
-                  <h4 className="text-h3 mb-2">Mastered in seconds.</h4>
-                  <p className="text-body">
-                    Zero onboarding. Zero learning curve. Opper is intentionally designed to be mastered by anyone, anywhere in seconds. Because you're sick of overly complex project management platforms.
-                  </p>
-                </div>
-                <div className="feature-card">
-                  <div className="feature-icon">
-                    <Target size={32} />
-                  </div>
-                  <h4 className="text-h3 mb-2">Pared down prioritization.</h4>
-                  <p className="text-body">
-                    You provide an input, Opper intelligently quantifies your priorities with a 'score' that takes your perspective seriously. It's everything you need to make smarter decisions, and nothing you don't.
-                  </p>
-                </div>
-              </div>
-
-              <a href="https://opper.dev" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                Join Opper Waitlist
-              </a>
-            </div>
-
-            {/* Gravity Product */}
-            <div className="product-section">
-              <h3 className="text-h2 text-accent mb-3">Gravity</h3>
-              <p className="text-subtitle mb-6">
-                Sustainable Energy Storage for Today's Grids
-              </p>
-              
-              <div className="grid grid-cols-auto mb-6">
-                <div className="feature-card">
-                  <div className="feature-icon">
-                    <Mountain size={32} />
-                  </div>
-                  <h4 className="text-h3 mb-2">Mountain Gravity Energy Storage</h4>
-                  <p className="text-body">
-                    Leveraging natural gravity forces to store excess renewable energy during peak production and release it during high demand periods.
-                  </p>
-                </div>
-                <div className="feature-card">
-                  <div className="feature-icon">
-                    <Battery size={32} />
-                  </div>
-                  <h4 className="text-h3 mb-2">Cost-Effective & Scalable</h4>
-                  <p className="text-body">
-                    A sustainable alternative to traditional energy storage methods like Pumped Hydro and chemical batteries.
-                  </p>
-                </div>
-              </div>
-
-              <a 
-                href="https://firebasestorage.googleapis.com/v0/b/pinwout-bd900.firebasestorage.app/o/gravity_whitepaper_30-mar-2025.pdf?alt=media&token=14f6ba40-f986-4446-8f61-90453f37238b" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn btn-secondary"
-              >
-                Download Gravity Whitepaper
-              </a>
-            </div>
-
             {/* Unpanic Project */}
-            <div className="product-section mt-6">
+            <div className="product-section mb-6">
               <h3 className="text-h2 text-accent mb-3">Unpanic</h3>
               <p className="text-subtitle mb-6">
                 A system designed to help people with Complex PTSD identify and overcome their triggers and flashbacks for good
               </p>
               
-              <div className="grid grid-cols-auto mb-6">
+              <div className="portfolio-grid mb-6">
                 <div className="feature-card">
                   <div className="feature-icon">
                     <Heart size={32} />
@@ -170,9 +78,101 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="btn btn-secondary opacity-60 cursor-not-allowed">
-                Coming Soon
+              <a href="https://unpanic.app" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                Try Unpanic Now
+              </a>
+            </div>
+
+            {/* Gravity Product */}
+            <div className="product-section mb-6">
+              <h3 className="text-h2 text-accent mb-3">Gravity</h3>
+              <p className="text-subtitle mb-6">
+                Sustainable Energy Storage for Today's Grids
+              </p>
+              
+              <div className="portfolio-grid mb-6">
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <Mountain size={32} />
+                  </div>
+                  <h4 className="text-h3 mb-2">Mountain Gravity Energy Storage</h4>
+                  <p className="text-body">
+                    Leveraging natural gravity forces to store excess renewable energy during peak production and release it during high demand periods.
+                  </p>
+                </div>
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <Battery size={32} />
+                  </div>
+                  <h4 className="text-h3 mb-2">Cost-Effective & Scalable</h4>
+                  <p className="text-body">
+                    A sustainable alternative to traditional energy storage methods like Pumped Hydro and chemical batteries.
+                  </p>
+                </div>
               </div>
+
+              <a 
+                href="https://firebasestorage.googleapis.com/v0/b/pinwout-bd900.firebasestorage.app/o/gravity_whitepaper_30-mar-2025.pdf?alt=media&token=14f6ba40-f986-4446-8f61-90453f37238b" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-secondary"
+              >
+                Download Gravity Whitepaper
+              </a>
+            </div>
+
+            {/* Opper Product */}
+            <div className="product-section">
+              <h3 className="text-h2 text-accent mb-3">Opper</h3>
+              <p className="text-subtitle mb-3">
+                Simplified prioritization. Faster progression.
+              </p>
+              <p className="text-body mb-6" style={{ opacity: 0.8, fontStyle: 'italic' }}>
+                Opper is in private beta. Join our waitlist to get early access and be the first to know when new spots open up.
+              </p>
+              
+              <div className="portfolio-grid mb-6">
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <Users size={32} />
+                  </div>
+                  <h4 className="text-h3 mb-2">Align your organization.</h4>
+                  <p className="text-body">
+                    Your company is the most effective when everyone is rowing in the same direction. Opper measures and quantifies how well aligned your team is, and provides actionable insights to get everyone on the same page.
+                  </p>
+                </div>
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <Brain size={32} />
+                  </div>
+                  <h4 className="text-h3 mb-2">Invisible intelligence.</h4>
+                  <p className="text-body">
+                    Opper uses proven decision making frameworks and prioritization methods to bring data to your intuition and decision making. But you'd never know it. Opper's intelligence is designed to stay out of your way.
+                  </p>
+                </div>
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <Zap size={32} />
+                  </div>
+                  <h4 className="text-h3 mb-2">Mastered in seconds.</h4>
+                  <p className="text-body">
+                    Zero onboarding. Zero learning curve. Opper is intentionally designed to be mastered by anyone, anywhere in seconds. Because you're sick of overly complex project management platforms.
+                  </p>
+                </div>
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <Target size={32} />
+                  </div>
+                  <h4 className="text-h3 mb-2">Pared down prioritization.</h4>
+                  <p className="text-body">
+                    You provide an input, Opper intelligently quantifies your priorities with a 'score' that takes your perspective seriously. It's everything you need to make smarter decisions, and nothing you don't.
+                  </p>
+                </div>
+              </div>
+
+              <a href="mailto:hello@opper.dev" className="btn btn-primary">
+                Contact Sales
+              </a>
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function Home() {
               efficiency and impact. We believe that with the right investment approach, small capital 
               inputs can generate extraordinary returns and technological breakthroughs.
             </p>
-            <div className="grid grid-cols-2 mb-6">
+            <div className="team-grid mb-6">
               <div>
                 <h3 className="text-h3 text-accent mb-2">Our Investment Philosophy</h3>
                 <p className="text-body">

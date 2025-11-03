@@ -28,7 +28,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="nav-desktop">
-            <a href="#products" className="nav-link">Projects</a>
+            <a href="#portfolio" className="nav-link">Portfolio</a>
             <a href="#about" className="nav-link">About</a>
             <a href="mailto:hello@pinwout.com" className="btn btn-primary btn-sm">
               Contact
@@ -52,8 +52,8 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <nav className="nav-mobile">
-            <a href="#products" className="nav-link-mobile" onClick={() => setIsMobileMenuOpen(false)}>
-              Projects
+            <a href="#portfolio" className="nav-link-mobile" onClick={() => setIsMobileMenuOpen(false)}>
+              Portfolio
             </a>
             <a href="#about" className="nav-link-mobile" onClick={() => setIsMobileMenuOpen(false)}>
               About
