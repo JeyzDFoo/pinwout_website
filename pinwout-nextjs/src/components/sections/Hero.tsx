@@ -28,9 +28,9 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            We transform small inputs into powerful results, focusing on efficiency and impact. 
-            With our flagship app, <span className="text-accent-golden font-semibold">Opper</span>, 
-            we are redefining how businesses operate.
+            A Micro-Angel investment fund transforming small inputs into powerful results. 
+            Based in Calgary, Alberta, Canada, we focus on early-stage technology investments 
+            and developing innovative solutions like <span className="text-accent-golden font-semibold">Opper</span>.
           </motion.p>
 
           <motion.p
@@ -39,8 +39,8 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            As one of Alberta's fastest growing tech companies, we are strategically positioning 
-            ourselves to be a sustainable, decentralized, and diversified technology company.
+            As a Calgary-based Micro-Angel fund, we invest in and build sustainable, 
+            decentralized technologies that create outsized impact from modest beginnings.
           </motion.p>
 
           <motion.div

@@ -34,8 +34,9 @@ const AboutSection: React.FC = () => {
               variants={itemVariants}
               className="text-xl mb-8 leading-relaxed"
             >
-              PinWout VC is a growing group of technical products. We're driven by the belief that 
-              even the smallest, most basic inputs can lead to high-impact results when used effectively.
+              PinWout Venture Corp is a Micro-Angel investment fund based in Calgary, Alberta, Canada. 
+              We're driven by the belief that even the smallest, most basic inputs can lead to 
+              high-impact results when invested in and developed effectively.
             </motion.p>
 
             <motion.blockquote 
@@ -48,14 +49,16 @@ const AboutSection: React.FC = () => {
 
             <motion.div variants={itemVariants} className="prose prose-lg prose-invert max-w-none">
               <p className="leading-relaxed mb-6">
-                With our flagship app, Opper, we're building a platform that empowers anyone to turn 
-                everyday, subjective inputs into high-impact, life-changing results. We adopt that same 
-                ethos when tackling bigger, global problems. With the right approach, any input — whether 
-                energy, effort, or investment — can become something of much greater value.
+                As a Micro-Angel investment fund, we identify and support early-stage technologies 
+                that embody our core philosophy. Our flagship portfolio company, Opper, demonstrates 
+                how we turn everyday inputs into high-impact, life-changing results. We adopt that same 
+                investment ethos when tackling bigger, global problems through our fund.
               </p>
               
               <p className="leading-relaxed mb-8">
-                We're building technologies that realize that concept at every possible level of impact.
+                Whether it's energy, effort, or capital investment, we specialize in finding opportunities 
+                where small inputs can become something of much greater value. We're building and investing 
+                in technologies that realize this concept at every possible level of impact.
               </p>
 
               <div className="flex items-center justify-center space-x-2 text-lg mb-12">

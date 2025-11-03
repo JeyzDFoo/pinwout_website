@@ -1,3 +1,5 @@
-# pinwout_vc
+# PinWout Venture Corp
 
-A new Flutter project.
+A Micro-Angel investment fund based in Calgary, Alberta, Canada.
+
+Transforming small inputs into powerful results through strategic early-stage technology investments.

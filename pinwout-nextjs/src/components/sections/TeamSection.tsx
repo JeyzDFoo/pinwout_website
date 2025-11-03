@@ -54,7 +54,8 @@ const TeamSection: React.FC = () => {
             variants={itemVariants}
             className="text-xl text-neutral-beige max-w-3xl mx-auto"
           >
-            Meet the team building the future of productivity and sustainable energy
+            Meet the founders of Calgary's innovative Micro-Angel investment fund, 
+            building the future through strategic investments and hands-on development
           </motion.p>
         </motion.div>
 

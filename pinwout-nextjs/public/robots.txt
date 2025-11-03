@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pinwout-bd900.web.app/sitemap.xml
+
+# Disallow development and admin areas
+Disallow: /_next/
+Disallow: /api/
+Disallow: *.json
+
+# Allow important pages
+Allow: /
+Allow: /opper
+Allow: /gravity
+Allow: /team
+Allow: /contact

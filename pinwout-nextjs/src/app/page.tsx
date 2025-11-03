@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Users, Brain, Zap, Target, Mountain, Battery } from 'lucide-react';
+import { Users, Brain, Zap, Target, Mountain, Battery, Heart, Shield, Lightbulb, Activity } from 'lucide-react';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,11 +26,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products Section */}
+      {/* Projects Section */}
       <section id="products" className="section section-products">
         <div className="container">
           <div className={`animate-fade-in-up animate-delay-200 ${isVisible ? '' : 'opacity-0'}`}>
-            <h2 className="text-h2 mb-6" style={{ textAlign: 'center' }}>Our Products</h2>
+            <h2 className="text-h2 mb-6" style={{ textAlign: 'center' }}>Our Projects</h2>
             
             {/* Opper Product */}
             <div className="product-section mb-6">
@@ -123,6 +123,57 @@ export default function Home() {
                 Download Gravity Whitepaper
               </a>
             </div>
+
+            {/* Unpanic Project */}
+            <div className="product-section mt-6">
+              <h3 className="text-h2 text-accent mb-3">Unpanic</h3>
+              <p className="text-subtitle mb-6">
+                A system designed to help people with Complex PTSD identify and overcome their triggers and flashbacks for good
+              </p>
+              
+              <div className="grid grid-cols-auto mb-6">
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <Heart size={32} />
+                  </div>
+                  <h4 className="text-h3 mb-2">Trauma-Informed Care</h4>
+                  <p className="text-body">
+                    Built with deep understanding of Complex PTSD, providing safe and effective tools for trauma recovery and emotional regulation.
+                  </p>
+                </div>
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <Shield size={32} />
+                  </div>
+                  <h4 className="text-h3 mb-2">Trigger Identification</h4>
+                  <p className="text-body">
+                    Advanced pattern recognition helps users identify personal triggers and develop personalized coping strategies for lasting recovery.
+                  </p>
+                </div>
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <Activity size={32} />
+                  </div>
+                  <h4 className="text-h3 mb-2">Real-Time Support</h4>
+                  <p className="text-body">
+                    Immediate access to grounding techniques and coping mechanisms when users need them most, preventing escalation of symptoms.
+                  </p>
+                </div>
+                <div className="feature-card">
+                  <div className="feature-icon">
+                    <Lightbulb size={32} />
+                  </div>
+                  <h4 className="text-h3 mb-2">Evidence-Based Methods</h4>
+                  <p className="text-body">
+                    Incorporates proven therapeutic approaches and scientific research to provide effective, measurable progress in PTSD recovery.
+                  </p>
+                </div>
+              </div>
+
+              <div className="btn btn-secondary opacity-60 cursor-not-allowed">
+                Coming Soon
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -133,20 +184,23 @@ export default function Home() {
           <div className={`animate-fade-in-up animate-delay-600 ${isVisible ? '' : 'opacity-0'}`}>
             <h2 className="text-h2 mb-4">What is PinWout?</h2>
             <p className="text-subtitle mb-6">
-              PinWout is about maximizing efficiency and impact. We believe that with the right tools, 
-              processes, and mindset, small inputs can generate extraordinary outputs.
+              PinWout Venture Corp is a Calgary-based Micro-Angel investment fund focused on maximizing 
+              efficiency and impact. We believe that with the right investment approach, small capital 
+              inputs can generate extraordinary returns and technological breakthroughs.
             </p>
             <div className="grid grid-cols-2 mb-6">
               <div>
-                <h3 className="text-h3 text-accent mb-2">Our Philosophy</h3>
+                <h3 className="text-h3 text-accent mb-2">Our Investment Philosophy</h3>
                 <p className="text-body">
-                  Focus on what matters most. Eliminate waste. Amplify results through intelligent automation and decision-making frameworks.
+                  Focus on early-stage technologies that matter most. We identify and eliminate waste while 
+                  amplifying results through intelligent capital deployment and strategic guidance.
                 </p>
               </div>
               <div>
                 <h3 className="text-h3 text-accent mb-2">Our Approach</h3>
                 <p className="text-body">
-                  We combine proven methodologies with cutting-edge technology to help organizations achieve more with less.
+                  We combine proven investment methodologies with hands-on technology development to help 
+                  portfolio companies achieve outsized impact from modest beginnings.
                 </p>
               </div>
             </div>
@@ -158,12 +212,13 @@ export default function Home() {
       <section className="section section-cta">
         <div className="container">
           <div className={`animate-fade-in-up ${isVisible ? '' : 'opacity-0'}`}>
-            <h2 className="text-h2 mb-4">Ready to Get Started?</h2>
+            <h2 className="text-h2 mb-4">Ready to Connect?</h2>
             <p className="text-subtitle mb-6">
-              Transform your inputs into powerful results with PinWout.
+              Whether you're seeking investment or exploring partnership opportunities, 
+              let's discuss how we can transform small inputs into powerful results together.
             </p>
             <a href="mailto:hello@pinwout.com" className="btn btn-primary">
-              Contact Us
+              Get in Touch
             </a>
           </div>
         </div>

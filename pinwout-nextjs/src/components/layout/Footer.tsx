@@ -7,6 +7,7 @@ const Footer: React.FC = () => {
   const quickLinks = [
     { name: 'Opper', href: '/opper' },
     { name: 'Gravity', href: '/gravity' },
+    { name: 'Unpanic', href: '#products' },
     { name: 'Team', href: '/team' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -14,6 +15,7 @@ const Footer: React.FC = () => {
   const products = [
     { name: 'Opper App', href: 'https://www.opper.dev' },
     { name: 'Gravity Whitepaper', href: '/gravity#whitepaper' },
+    { name: 'Unpanic', href: '#products' },
   ];
 
   return (
@@ -31,7 +33,8 @@ const Footer: React.FC = () => {
                 </div>
               </div>
               <p className="text-sm opacity-90 mb-4 max-w-md">
-                Transforming small inputs into powerful results. Based in Calgary, Alberta, Canada.
+                A Micro-Angel investment fund transforming small inputs into powerful results. 
+                Based in Calgary, Alberta, Canada.
               </p>
               <p className="text-xs opacity-70">
                 © {new Date().getFullYear()} PinWout Venture Corp. All rights reserved.
@@ -55,9 +58,9 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Products */}
+            {/* Projects */}
             <div>
-              <h4 className="font-semibold text-white mb-4">Products</h4>
+              <h4 className="font-semibold text-white mb-4">Projects</h4>
               <ul className="space-y-2">
                 {products.map((product) => (
                   <li key={product.name}>

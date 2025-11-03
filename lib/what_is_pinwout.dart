@@ -43,7 +43,7 @@ class _WhatIsPinWoutState extends State<WhatIsPinWout> {
             ),
             SizedBox(height: 12),
             Text(
-              "PinWout VC is a growing group of technical products. We're driven by the belief that even the smallest, most basic inputs can lead to high-impact results when used effectively.",
+              "PinWout Venture Corp is a Micro-Angel investment fund based in Calgary, Alberta, Canada. We're driven by the belief that even the smallest, most basic investments can lead to high-impact results when deployed effectively.",
               style: TextStyle(
                 color: PinWoutColors.beige,
               ),
@@ -67,7 +67,7 @@ class _WhatIsPinWoutState extends State<WhatIsPinWout> {
             ),
             SizedBox(height: 24),
             Text(
-              "With our flagship app, Opper, we're building a platform that empowers anyone to turn everyday, subjective inputs into high-impact, life-changing results. We adopt that same ethos when tackling bigger, global problems. With the right approach, any input — whether energy, effort, or investment — can become something of much greater value. We're building technologies that realize that concept at every possible level of impact.\n\nPower in. Work out.\n\nPinWout is proudly founded and  located in Calgary, Alberta, Canada.",
+              "As a Micro-Angel investment fund, we identify and support early-stage technologies like our flagship portfolio company, Opper. We adopt our investment ethos when tackling bigger, global problems through strategic capital deployment. With the right approach, any investment — whether energy, effort, or capital — can become something of much greater value. We're building and investing in technologies that realize this concept at every possible level of impact.\n\nPower in. Work out.\n\nPinWout Venture Corp is proudly founded and located in Calgary, Alberta, Canada.",
               style: TextStyle(
                 color: PinWoutColors.beige,
               ),
