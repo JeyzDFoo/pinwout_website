@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "pinwout-nextjs/out",
+    "public": "out",
     "ignore": [
       "firebase.json",
       "**/.*",
