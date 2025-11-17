@@ -1,0 +1,6 @@
+rust_input: crate::api
+rust_root: rust/
+dart_output: lib/src/rust/
+llvm_path:
+  - /opt/homebrew/opt/llvm
+  - /usr/local/opt/llvm
