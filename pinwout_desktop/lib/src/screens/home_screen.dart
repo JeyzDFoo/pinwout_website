@@ -38,30 +38,37 @@ class HomeScreen extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'PinWout Venture Corp',
-              style: Theme.of(
-                context,
-              ).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Cardano Blockchain Integration',
-              style: Theme.of(
-                context,
-              ).textTheme.bodyLarge?.copyWith(color: Colors.grey[600]),
-            ),
-          ],
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'PinWout Venture Corp',
+                style: Theme.of(
+                  context,
+                )
+                    .textTheme
+                    .headlineMedium
+                    ?.copyWith(fontWeight: FontWeight.bold),
+                overflow: TextOverflow.ellipsis,
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Cardano Blockchain Integration',
+                style: Theme.of(
+                  context,
+                ).textTheme.bodyLarge?.copyWith(color: Colors.grey[600]),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
+          ),
         ),
+        const SizedBox(width: 16),
         Consumer<WalletProvider>(
           builder: (context, wallet, _) {
             return ElevatedButton.icon(
-              onPressed: wallet.isConnected
-                  ? null
-                  : () => _showConnectDialog(context),
+              onPressed:
+                  wallet.isConnected ? null : () => _showConnectDialog(context),
               icon: Icon(
                 wallet.isConnected
                     ? Icons.check_circle

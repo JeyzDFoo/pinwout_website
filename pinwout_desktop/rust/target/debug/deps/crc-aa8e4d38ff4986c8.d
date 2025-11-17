@@ -1,0 +1,12 @@
+/Users/jeyzdfoo/Desktop/code/pinwout_website/pinwout_desktop/rust/target/debug/deps/crc-aa8e4d38ff4986c8.d: /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/lib.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc128.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc16.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc32.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc64.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc8.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/table.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/util.rs
+
+/Users/jeyzdfoo/Desktop/code/pinwout_website/pinwout_desktop/rust/target/debug/deps/libcrc-aa8e4d38ff4986c8.rmeta: /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/lib.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc128.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc16.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc32.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc64.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc8.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/table.rs /Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/util.rs
+
+/Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/lib.rs:
+/Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc128.rs:
+/Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc16.rs:
+/Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc32.rs:
+/Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc64.rs:
+/Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc8.rs:
+/Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/table.rs:
+/Users/jeyzdfoo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/util.rs:

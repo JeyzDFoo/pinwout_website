@@ -16,7 +16,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  flutter_rust_bridge: ^2.5.1
+  flutter_rust_bridge: 2.8.0
   ffi: ^2.1.3
   freezed_annotation: ^2.4.4
   meta: ^1.15.0
@@ -51,9 +51,9 @@ flutter:
     - assets/images/
     - assets/icons/
 
-  fonts:
-    - family: Inter
-      fonts:
-        - asset: assets/fonts/Inter-Regular.ttf
-        - asset: assets/fonts/Inter-Bold.ttf
-          weight: 700
+  # fonts:
+  #   - family: Inter
+  #     fonts:
+  #       - asset: assets/fonts/Inter-Regular.ttf
+  #       - asset: assets/fonts/Inter-Bold.ttf
+  #         weight: 700
